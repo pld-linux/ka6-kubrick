@@ -1,22 +1,22 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kubrick
 Summary:	kubrick
 Summary(pl.UTF-8):	kubrick
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	77f6076cf64075d99ae7bd9bad3d7b46
+# Source0-md5:	44a05a5c30d4f5d503b88e64af86c315
 URL:		http://www.kde.org/
-BuildRequires:	OpenGL-devel
 BuildRequires:	OpenGL-GLU-devel
+BuildRequires:	OpenGL-devel
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= 5.11.1
 BuildRequires:	Qt6OpenGL-devel
@@ -50,11 +50,11 @@ of pretty patterns and solution moves, or you can make up your own
 puzzles.
 
 %description -l pl.UTF-8
-Kubrick jest oparty na kostce Rubika z rozmiarami kostki w zakresie
-od 2x2x2 do 6x6x6, a także nieregularnymi kształtami, takimi jak:
-5x3x2, 6x4x1 czy 2x2x1. Gra zawiera wybór zagadek do rozwiązania
-różnego poziomu trudności, a także dema, ciekawe wzory, a także
-rozwiązania. Możesz także tworzyć własne układy.
+Kubrick jest oparty na kostce Rubika z rozmiarami kostki w zakresie od
+2x2x2 do 6x6x6, a także nieregularnymi kształtami, takimi jak: 5x3x2,
+6x4x1 czy 2x2x1. Gra zawiera wybór zagadek do rozwiązania różnego
+poziomu trudności, a także dema, ciekawe wzory, a także rozwiązania.
+Możesz także tworzyć własne układy.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -90,3 +90,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kubrick
 %{_datadir}/metainfo/org.kde.kubrick.appdata.xml
 %{_datadir}/qlogging-categories6/kubrick.categories
+%{_datadir}/qlogging-categories6/kubrick.renamecategories
