@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.04.1
+%define		kdeappsver	25.04.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kubrick
 Summary:	kubrick
 Summary(pl.UTF-8):	kubrick
 Name:		ka6-%{kaname}
-Version:	25.04.1
+Version:	25.04.2
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	a11b04752db80415f197e4e12923b3ce
+# Source0-md5:	a289cfc5f2eaa1bcba77fc6b8946ddf5
 URL:		http://www.kde.org/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
